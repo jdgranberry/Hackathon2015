@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private ListView listView;
-    private CustomListViewAdaptor customListViewAdaptor;
+    private CustomListViewAdapter customListViewAdapter;
     private String sampleText = "Lorem ipsum dolor sit amet, duo tale principes sadipscing ei." +
             " No cibo nemore impedit mei, primis putent virtute pro no, modus paulo cetero et est." +
             " Mea agam gloriatur an";
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
 
 
-        //System.out.println(feedTitles.length);
+
 
         for (int i = 0; i < feedTitles.length; i++){
             HashMap<String, String> data = new HashMap<>();
@@ -99,9 +99,9 @@ public class MainActivity extends AppCompatActivity
         listView = (ListView) findViewById(R.id.list);
 
         //Setup Adapter
-        customListViewAdaptor = new CustomListViewAdaptor(getApplicationContext(), feedList);
+        customListViewAdapter = new CustomListViewAdapter(getApplicationContext(), feedList);
 
-        listView.setAdapter(customListViewAdaptor);
+        listView.setAdapter(customListViewAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
