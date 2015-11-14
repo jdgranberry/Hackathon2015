@@ -1,5 +1,6 @@
 package com.example.splitix.dcitizen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private ListView listView;
-    private CustomListViewAdaptor customListViewAdaptor;
+    private CustomListViewAdapter customListViewAdapter;
     private String sampleText = "Lorem ipsum dolor sit amet, duo tale principes sadipscing ei." +
             " No cibo nemore impedit mei, primis putent virtute pro no, modus paulo cetero et est." +
             " Mea agam gloriatur an";
@@ -100,9 +101,9 @@ public class MainActivity extends AppCompatActivity
         listView = (ListView) findViewById(R.id.list);
 
         //Setup Adapter
-        customListViewAdaptor = new CustomListViewAdaptor(getApplicationContext(), feedList);
+        customListViewAdapter = new CustomListViewAdapter(getApplicationContext(), feedList);
 
-        listView.setAdapter(customListViewAdaptor);
+        listView.setAdapter(customListViewAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
