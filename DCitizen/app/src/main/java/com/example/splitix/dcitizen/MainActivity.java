@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity
         ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
 
 
-        //System.out.println(feedTitles.length);
+
 
         for (int i = 0; i < feedTitles.length; i++){
             HashMap<String, String> data = new HashMap<>();
