@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:padding="5dp"
+    android:background="@drawable/list_selector"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -34,8 +35,10 @@
 
     <TextView
         android:id="@+id/feed_post"
-        android:text="Josh jskpjs dhhdsj"
-        android:textSize="18sp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor
+        nisi facilisis lacus iaculis vulputate. Morbi leo nisi, ornare at maximus blandit,
+        condimentum maximus odio. Aliquam erat volutpat."
+        android:textSize="20sp"
         android:layout_toRightOf="@+id/thumbnail"
         android:layout_below="@+id/feed_title"
         android:layout_width="fill_parent"
