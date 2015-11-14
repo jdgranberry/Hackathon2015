@@ -35,12 +35,22 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBngAegOWNq8ivkiHOniF61BixVBDS5aJ8"
-            />
+            android:value="AIzaSyBngAegOWNq8ivkiHOniF61BixVBDS5aJ8" />
 
         <activity
             android:name=".MapActivity"
             android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name=".EventDetail"
+            android:label="@string/title_activity_event_detail" >
+        </activity>
+        <activity
+            android:name=".EventSubmissionActivity"
+            android:label="Event Submission Page"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
         </activity>
     </application>
 
