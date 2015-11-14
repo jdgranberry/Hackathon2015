@@ -42,6 +42,13 @@
             android:name=".MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
+        <activity
+            android:name=".EventSubmissionActivity"
+            android:label="Event Submission Page"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+        </activity>
     </application>
 
 </manifest>
