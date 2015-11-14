@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private ListView listView;
-    private CustomListViewAdaptor customListViewAdaptor;
+    private CustomListViewAdapter customListViewAdapter;
     private String sampleText = "Lorem ipsum dolor sit amet, duo tale principes sadipscing ei." +
             " No cibo nemore impedit mei, primis putent virtute pro no, modus paulo cetero et est." +
             " Mea agam gloriatur an";
@@ -32,6 +32,37 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final String[] feedTitles = new String[]{
+                "Help needed at Pet Shelter",
+                "Food Bank Needs You!!",
+                "Help Pets find a home!",
+                "Donate Blood Today",
+                "Serving food @ Food Bank",
+                "The Hospital needs you",
+                "Looking for help from pet people",
+                "Help clean up the flooded areas",
+                "Trash pick up by the river!"
+
+
+        };
+
+        final String[] feedPosts = new String[]{
+                "Chicken",
+                "Hey You",
+                "How to Kill a Mockingbird",
+                "Lost in Paradise",
+                "The Complete Android and Java Developer...",
+                "Titanic",
+                "The Kite Runner",
+                "Lord of the Rings",
+                "The Hobbit",
+                "Java in a Nutshell",
+                "The Social Network",
+                "Game Programming All in One"
+
+        };
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -53,35 +84,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        final String[] feedTitles = new String[]{
-                "Help needed at Pet Shelter",
-                "Food Bank Needs You!!",
-                "Help Pets find a home!",
-                "Donate Blood Today",
-                "Serving food @ Food Bank",
-                "The Hospital needs you",
-                "Looking for help from pet people",
-                "Help clean up the flooded areas",
-                "Trash pick up by the river!"
 
-
-        };
-
-        final String[] feedPosts = new String[]{
-                sampleText,
-                sampleText,
-                "How to Kill a Mockingbird",
-                "Lost in Paradise",
-                "The Complete Android and Java Developer...",
-                "Titanic",
-                "The Kite Runner",
-                "Lord of the Rings",
-                "The Hobbit",
-                "Java in a Nutshell",
-                "The Social Network",
-                "Game Programming All in One"
-
-        };
 
         ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
 
@@ -99,9 +102,9 @@ public class MainActivity extends AppCompatActivity
         listView = (ListView) findViewById(R.id.list);
 
         //Setup Adapter
-        customListViewAdaptor = new CustomListViewAdaptor(getApplicationContext(), feedList);
+        customListViewAdapter = new CustomListViewAdapter(getApplicationContext(), feedList);
 
-        listView.setAdapter(customListViewAdaptor);
+        listView.setAdapter(customListViewAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
