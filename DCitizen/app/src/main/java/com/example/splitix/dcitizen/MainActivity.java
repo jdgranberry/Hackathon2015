@@ -55,18 +55,16 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         final String[] feedTitles = new String[]{
-                "The Alchemist",
-                "The Giver",
-                "How to Kill a Mockingbird",
-                "Lost in Paradise",
-                "The Complete Android and Java Developer...",
-                "Titanic",
-                "The Kite Runner",
-                "Lord of the Rings",
-                "The Hobbit",
-                "Java in a Nutshell",
-                "The Social Network",
-                "Game Programming All in One"
+                "Help needed at Pet Shelter",
+                "Food Bank Needs You!!",
+                "Help Pets find a home!",
+                "Donate Blood Today",
+                "Serving food @ Food Bank",
+                "The Hospital needs you",
+                "Looking for help from pet people",
+                "Help clean up the flooded areas",
+                "Trash pick up by the river!"
+
 
         };
 
@@ -89,11 +87,12 @@ public class MainActivity extends AppCompatActivity
         final ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
 
 
+        //System.out.println(feedTitles.length);
+
         for (int i = 0; i < feedTitles.length; i++){
             HashMap<String, String> data = new HashMap<>();
             data.put("title", feedTitles[i]);
             data.put("post", feedPosts[i]);
-
 
             feedList.add(data);
         }
