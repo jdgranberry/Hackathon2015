@@ -118,9 +118,9 @@ public class MainActivity extends AppCompatActivity {
                 case 0:
                     return "Feed";
                 case 1:
-                    return "";
+                    return "Map";
                 case 2:
-                    return "SECTION 3";
+                    return "Get Involved";
             }
             return null;
         }
