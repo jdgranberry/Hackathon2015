@@ -45,6 +45,13 @@
             android:name=".EventDetail"
             android:label="@string/title_activity_event_detail" >
         </activity>
+        <activity
+            android:name=".EventSubmissionActivity"
+            android:label="Event Submission Page"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+        </activity>
     </application>
 
 </manifest>

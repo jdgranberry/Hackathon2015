@@ -14,13 +14,13 @@ import java.util.HashMap;
 /**
  * Created by Splitix on 11/14/15.
  */
-public class CustomListViewAdaptor extends BaseAdapter {
+public class CustomListViewAdapter extends BaseAdapter {
 
     private Context mContext;
     private ArrayList<HashMap<String, String>> feed;
     private static LayoutInflater inflater = null;
 
-    public CustomListViewAdaptor(Context context, ArrayList<HashMap<String, String>> data){
+    public CustomListViewAdapter(Context context, ArrayList<HashMap<String, String>> data){
         mContext = context;
         feed = data;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -46,7 +46,7 @@ public class CustomListViewAdaptor extends BaseAdapter {
 
         View view = convertView;
 
-        if(convertView == null){
+        if(view == null){
             view = inflater.inflate(R.layout.list_row, null);
             TextView title = (TextView) view.findViewById(R.id.feed_title);
             TextView post = (TextView) view.findViewById(R.id.feed_post);
