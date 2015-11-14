@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity
 
     private ListView listView;
     private CustomListViewAdaptor customListViewAdaptor;
+    private String sampleText = "Lorem ipsum dolor sit amet, duo tale principes sadipscing ei." +
+            " No cibo nemore impedit mei, primis putent virtute pro no, modus paulo cetero et est." +
+            " Mea agam gloriatur an";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,12 +69,29 @@ public class MainActivity extends AppCompatActivity
 
         };
 
+        final String[] feedPosts = new String[]{
+                sampleText,
+                sampleText,
+                "How to Kill a Mockingbird",
+                "Lost in Paradise",
+                "The Complete Android and Java Developer...",
+                "Titanic",
+                "The Kite Runner",
+                "Lord of the Rings",
+                "The Hobbit",
+                "Java in a Nutshell",
+                "The Social Network",
+                "Game Programming All in One"
+
+        };
+
         ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
 
 
-        for(int i = 0; i < feedTitles.length; i++){
+        for (int i = 0; i < feedTitles.length; i++){
             HashMap<String, String> data = new HashMap<>();
             data.put("title", feedTitles[i]);
+            data.put("post", feedPosts[i]);
 
 
             feedList.add(data);
