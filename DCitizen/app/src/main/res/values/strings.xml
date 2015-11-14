@@ -6,4 +6,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_map">Map</string>
+    <string name="title_activity_event_detail">event_detail</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>
