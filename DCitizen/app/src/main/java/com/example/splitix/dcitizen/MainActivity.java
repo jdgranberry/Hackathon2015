@@ -107,8 +107,16 @@ public class MainActivity extends AppCompatActivity
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                int myPosition = position;
-                String itemClickId = listView.getItemAtPosition(myPosition).toString();
+
+                String itemClickId = listView.getItemAtPosition(position).toString();
+
+                 String title = feedTitles[position];
+                 String detail = feedPosts[position];
+
+                Intent detailedIntent = new Intent(MainActivity.this, EventDetail.class);
+                detailedIntent.putExtra("title", title );
+                detailedIntent.putExtra("details", detail);
+                startActivity(detailedIntent);
 
                 Toast.makeText(getApplicationContext(), "ID #" + itemClickId + " was click", Toast.LENGTH_LONG).show();
             }
