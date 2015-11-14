@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Super Hidden message because peter is amazing!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -116,11 +116,11 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Feed";
                 case 1:
-                    return "SECTION 2";
+                    return "Map";
                 case 2:
-                    return "SECTION 3";
+                    return "Get Involved";
             }
             return null;
         }
