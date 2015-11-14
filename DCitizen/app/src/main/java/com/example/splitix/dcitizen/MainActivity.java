@@ -1,5 +1,6 @@
 package com.example.splitix.dcitizen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity
 
         };
 
-        ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
+        final ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
 
 
         for (int i = 0; i < feedTitles.length; i++){
@@ -109,6 +110,15 @@ public class MainActivity extends AppCompatActivity
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int myPosition = position;
                 String itemClickId = listView.getItemAtPosition(myPosition).toString();
+
+                String title = feedTitles[myPosition];
+                String eventDetail = feedPosts[myPosition];
+
+                Intent detailedIntent = new Intent(MainActivity.this, EventDetail.class);
+                detailedIntent.putExtra("title", title);
+                detailedIntent.putExtra("details", eventDetail);
+
+                startActivity(detailedIntent);
 
                 Toast.makeText(getApplicationContext(), "ID #" + itemClickId + " was click", Toast.LENGTH_LONG).show();
             }

@@ -4,13 +4,36 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
-public class event_detail extends AppCompatActivity {
+import org.w3c.dom.Text;
+
+public class EventDetail extends AppCompatActivity {
+
+    private TextView title_view;
+    private TextView description_view;
+    private Bundle extras;
+    private String title;
+    private String description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_detail);
+
+        title_view = (TextView) findViewById(R.id.event_detail_title);
+        description_view = (TextView) findViewById(R.id.event_detail_description);
+
+        extras = getIntent().getExtras();
+
+         title = extras.getString("title");
+         description = extras.getString("details");
+
+        title_view.setText(title);
+        description_view.setText(description);
+
+
+
     }
 
     @Override

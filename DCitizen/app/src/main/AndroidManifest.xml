@@ -42,7 +42,7 @@
             android:label="@string/title_activity_map" >
         </activity>
         <activity
-            android:name=".event_detail"
+            android:name=".EventDetail"
             android:label="@string/title_activity_event_detail" >
         </activity>
     </application>
