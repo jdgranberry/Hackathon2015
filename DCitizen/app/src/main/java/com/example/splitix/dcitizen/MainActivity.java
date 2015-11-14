@@ -12,9 +12,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private ListView listView;
+    private CustomListViewAdaptor customListViewAdaptor;
+    private String sampleText = "Lorem ipsum dolor sit amet, duo tale principes sadipscing ei." +
+            " No cibo nemore impedit mei, primis putent virtute pro no, modus paulo cetero et est." +
+            " Mea agam gloriatur an";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +52,68 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        final String[] feedTitles = new String[]{
+                "The Alchemist",
+                "The Giver",
+                "How to Kill a Mockingbird",
+                "Lost in Paradise",
+                "The Complete Android and Java Developer...",
+                "Titanic",
+                "The Kite Runner",
+                "Lord of the Rings",
+                "The Hobbit",
+                "Java in a Nutshell",
+                "The Social Network",
+                "Game Programming All in One"
+
+        };
+
+        final String[] feedPosts = new String[]{
+                sampleText,
+                sampleText,
+                "How to Kill a Mockingbird",
+                "Lost in Paradise",
+                "The Complete Android and Java Developer...",
+                "Titanic",
+                "The Kite Runner",
+                "Lord of the Rings",
+                "The Hobbit",
+                "Java in a Nutshell",
+                "The Social Network",
+                "Game Programming All in One"
+
+        };
+
+        ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
+
+
+        for (int i = 0; i < feedTitles.length; i++){
+            HashMap<String, String> data = new HashMap<>();
+            data.put("title", feedTitles[i]);
+            data.put("post", feedPosts[i]);
+
+
+            feedList.add(data);
+        }
+
+        listView = (ListView) findViewById(R.id.list);
+
+        //Setup Adapter
+        customListViewAdaptor = new CustomListViewAdaptor(getApplicationContext(), feedList);
+
+        listView.setAdapter(customListViewAdaptor);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                int myPosition = position;
+                String itemClickId = listView.getItemAtPosition(myPosition).toString();
+
+                Toast.makeText(getApplicationContext(), "ID #" + itemClickId + " was click", Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
     @Override
