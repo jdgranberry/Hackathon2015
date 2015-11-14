@@ -10,7 +10,7 @@ public class EventContainer extends Object {
     private String imageUrl; // TODO Make into array for multiple images
     private String eventType;
     private String GPSlocation; // TODO find a better data type
-    
+
     public String getTitle() {
         return title;
     }
