@@ -69,9 +69,9 @@ public class MainActivity extends AppCompatActivity
         };
 
         final String[] feedPosts = new String[]{
-                "Chicken",
-                "Hey You",
-                "How to Kill a Mockingbird",
+                sampleText,
+                sampleText,
+                sampleText,
                 "Lost in Paradise",
                 "The Complete Android and Java Developer...",
                 "Titanic",
