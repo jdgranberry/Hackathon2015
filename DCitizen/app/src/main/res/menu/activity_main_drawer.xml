@@ -11,24 +11,24 @@
         <item
             android:id="@+id/nav_camara"
             android:icon="@drawable/navicon_home"
-            android:title="Home" />
+            android:title="Profile" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/navicon_paper"
+            android:icon="@drawable/navicon_profile"
             android:title="Sign In" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/navicon_profile"
-            android:title="Profile" />
+            android:icon="@drawable/navicon_hand"
+            android:title="Opportunities" />
 
         <item
             android:id="@+id/nav_share"
-            android:icon="@drawable/navicon_hand"
-            android:title="Share on Facebook" />
+            android:icon="@drawable/navicon_paper"
+            android:title="Post" />
         <item
             android:id="@+id/nav_send"
             android:icon="@drawable/navicon_plane"
-            android:title="Contact Us" />
+            android:title="Contact" />
     </group>
 
 
