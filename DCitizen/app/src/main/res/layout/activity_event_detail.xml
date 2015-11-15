@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:persistentDrawingCache="scrolling">
 
     <LinearLayout
         android:paddingTop="16dp"
@@ -20,7 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            android:textColor="@color/textDarkLighter"/>
 
         <TextView
             android:paddingTop="16dp"
@@ -30,20 +32,28 @@
             android:textSize="20sp"
             android:layout_gravity="center"
             android:paddingBottom="16dp"
-
             />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/temp_medium_image_event_detail"
+            android:scaleType="fitCenter"/>
 
         <ImageView
-            android:id="@+id/event_detail_image1"
-            android:layout_width="fill_parent"
             android:paddingTop="16dp"
-            android:layout_height="180dp"
-            android:layout_gravity="center"
-            android:scaleType="fitCenter"
-            android:src="@drawable/temp_medium_image_event_detail"
-            android:adjustViewBounds="false"/>
-        <!-- does not display  if image is large -->
-        <!-- stock image is placed here for testing -->
+            android:id="@+id/map_filler_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/eventmap"
+            />
+        <ImageView
+            android:paddingTop="16dp"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:id="@+id/submit_button"
+            android:src="@drawable/signup"
+            />
 
 
 

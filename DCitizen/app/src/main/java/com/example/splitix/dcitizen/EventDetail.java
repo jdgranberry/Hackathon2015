@@ -6,15 +6,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+
 import org.w3c.dom.Text;
 
 public class EventDetail extends AppCompatActivity {
 
     private TextView title_view;
     private TextView description_view;
+    private String eventType;
     private Bundle extras;
     private String title;
     private String description;
+    //private GoogleMap map = ((MapFragment) getFragmentManager().findFragmentById(R.id.g_map));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +31,13 @@ public class EventDetail extends AppCompatActivity {
 
         extras = getIntent().getExtras();
 
-         title = extras.getString("title");
-         description = extras.getString("details");
+        title = extras.getString("title");
+        description = extras.getString("details");
+        eventType = extras.getString("type");
+
 
         title_view.setText(title);
         description_view.setText(description);
-
 
 
     }
