@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="colorPrimary">#4d6057</color> <!-- Activity Title Bar -->
-    <color name="colorPrimaryDark">#4d6057</color>
+    <color name="colorPrimaryDark">#3d4c45</color>
     <color name="colorAccent">#be5930</color> <!-- FAB -->
 
     <color name="colorIcons">#BC5830</color>
     <color name="backgroundLight">#eceecd</color>
-    <color name="backgroundDark">#e0d5a1</color>
+    <color name="backgroundDark">#dcc293</color>
+    <color name="textDark">#05162e</color>
+    <color name="textDarkLighter">#505b6c</color>
 
     <!-- Gray to Dark Blue gradient -->
     <color name="gradientStart">#3e5252</color>
@@ -14,5 +16,6 @@
     <color name="gradientMid3">#162c3d</color>
     <color name="gradientMid4">#082034</color>
     <color name="gradientEnd">#05162e</color>
+
 
 </resources>

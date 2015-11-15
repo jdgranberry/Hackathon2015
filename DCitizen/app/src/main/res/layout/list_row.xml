@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:background="#ffeeeade"
+        android:background="@color/backgroundLight"
         android:orientation="vertical">
 
         <ImageView
@@ -29,7 +29,7 @@
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Joshua Galindo"
-        android:textColor="#040404"
+        android:textColor="@color/textDark"
         android:textSize="22sp"
         android:textStyle="bold" />
 
@@ -40,7 +40,7 @@
         android:layout_below="@+id/feed_title"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Josh"
-        android:textColor="#474646"
+        android:textColor="@color/textDarkLighter"
         android:textSize="15sp" />
 <!--
     <TextView
