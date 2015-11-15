@@ -61,6 +61,7 @@ public class CustomListViewAdapter extends BaseAdapter {
             post.setText(mData.get("post"));
 
 
+            // Alternate between light and dark background for list items
             if (position % 2 == 1) {
                 // TODO get colors from colors.xml programmatically
                 view.setBackgroundColor(Color.parseColor("#ECEECD")); // LIGHT

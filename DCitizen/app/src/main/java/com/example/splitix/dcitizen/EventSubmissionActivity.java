@@ -10,6 +10,9 @@ import android.widget.ImageButton;
 
 import com.example.splitix.dcitizen.Events.EventContainer;
 
+//TODO onclick button highlighting
+//TODO color repeats instead of alternating occasionally on Note3
+
 public class EventSubmissionActivity extends AppCompatActivity {
 
     ImageButton mSubmit;
@@ -26,6 +29,9 @@ public class EventSubmissionActivity extends AppCompatActivity {
 
         mCameraButton = (ImageButton) findViewById(R.id.camera_button);
 
+        EditText mTitle;
+        EditText mBlurb;
+        EditText mTags;
 
         mCameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +48,4 @@ public class EventSubmissionActivity extends AppCompatActivity {
 
 
     }
-
 }
-
