@@ -41,9 +41,9 @@
             android:src="@drawable/temp_medium_image_event_detail"
             android:scaleType="fitCenter"/>
 
-        <ImageView
+        <ImageButton
             android:paddingTop="16dp"
-            android:id="@+id/map_filler_image"
+            android:id="@+id/map_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
