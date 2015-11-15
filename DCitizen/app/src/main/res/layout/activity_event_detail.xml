@@ -34,14 +34,15 @@
             android:paddingBottom="16dp"
             />
         <ImageView
+            android:id="@+id/event_image"
             android:layout_width="fill_parent"
             android:layout_height="240dp"
             android:src="@drawable/temp_medium_image_event_detail"
             android:scaleType="fitCenter"/>
 
-        <ImageView
+        <ImageButton
             android:paddingTop="16dp"
-            android:id="@+id/map_filler_image"
+            android:id="@+id/map_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
@@ -51,7 +52,7 @@
             android:paddingTop="16dp"
             android:layout_width="fill_parent"
             android:layout_height="100dp"
-            android:id="@+id/submit_button"
+            android:id="@+id/sign_up_button"
             android:src="@drawable/signup"
             />
 
