@@ -54,7 +54,11 @@ public class CustomListViewAdapter extends BaseAdapter {
             TextView post = (TextView) view.findViewById(R.id.feed_post);
             ImageView icon = (ImageView) view.findViewById(R.id.feed_image);
 
+            Typeface font = Typeface.createFromAsset(mContext.getAssets(), "fonts/HelveticaNeueLTStd_Bd.otf");
+            title.setTypeface(font);
 
+            font = Typeface.createFromAsset(mContext.getAssets(), "fonts/HelveticaNeueLTStd_Lt.otf");
+            title.setTypeface(font);
 
             HashMap<String, String> mData;
 

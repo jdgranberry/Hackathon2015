@@ -29,9 +29,9 @@
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Joshua Galindo"
-        android:textColor="@color/textDark"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textColor="#509d76"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/feed_post"
@@ -40,7 +40,7 @@
         android:layout_below="@+id/feed_title"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Josh"
-        android:textColor="@color/textDarkLighter"
+        android:textColor="#05162e"
         android:textSize="15sp" />
 <!--
     <TextView

@@ -1,9 +1,12 @@
 package com.example.splitix.dcitizen;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.text.Spannable;
+import android.text.SpannableString;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -29,6 +32,19 @@ public class MainActivity extends AppCompatActivity
     private String sampleText = "Lorem ipsum dolor sit amet, duo tale principes sadipscing ei." +
             " No cibo nemore impedit mei, primis putent virtute pro no, modus paulo cetero et est." +
             " Mea agam gloriatur an";
+    private String animalText = "We are looking for volunteers for our\n" +
+            "monthly adoption events. We need volunteers who have a passion for animals and want" +
+            " to see them go to good homes. If you would like to join our group sign up and send" +
+            " us an email!";
+    private String naturalText = "Help the vicitims of the recent flooding" +
+                                 "in San Marcos and surrounding areas.";
+    private String bloodText = "Save a life, donate blood today!" +
+                               "Sponsored by The American Red Cross.";
+    private String foodText = "The holidays are almost here, " +
+                              "donate food and toys to help families in need.";
+    private String cleanText = "We are looking for volunteers to help " +
+                               "clean up the San Marcos River!";
+
 
 
 
@@ -38,6 +54,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
 
 
 
@@ -64,10 +82,10 @@ public class MainActivity extends AppCompatActivity
         final String[] feedTitles = new String[]{
                 "Help needed at Pet Shelter",
                 "Food Bank Needs You!!",
-                "Help Pets find a home!",
+                "Austin Pets Alive!",
                 "Donate Blood Today",
-                "Serving food @ Food Bank",
-                "The Hospital needs you",
+                "Food Bank Donations",
+                "River Cleanup",
                 "Looking for help from pet people",
                 "Help clean up the flooded areas",
                 "Trash pick up by the river!"
@@ -76,18 +94,15 @@ public class MainActivity extends AppCompatActivity
         };
 
         final String[] feedPosts = new String[]{
-                sampleText,
-                sampleText,
-                sampleText,
-                "Lost in Paradise",
-                "The Complete Android and Java Developer...",
-                "Titanic",
-                "The Kite Runner",
-                "Lord of the Rings",
-                "The Hobbit",
-                "Java in a Nutshell",
-                "The Social Network",
-                "Game Programming All in One"
+                animalText,
+                foodText,
+                animalText,
+                bloodText,
+                foodText,
+                cleanText,
+                animalText,
+                naturalText,
+                cleanText
 
         };
 
@@ -101,19 +116,10 @@ public class MainActivity extends AppCompatActivity
                 "pet",
                 "natural",
                 "comm",
-                "none",
-                "none",
-                "none",
-
-        };
-
-        final String[] feedLocations = new String[]{
 
         };
 
         ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
-
-
 
 
         for (int i = 0; i < feedTitles.length; i++){
@@ -140,13 +146,15 @@ public class MainActivity extends AppCompatActivity
 
                 String title = feedTitles[position];
                 String detail = feedPosts[position];
+                String iconImage = feedIcons[position];
 
                 Intent detailedIntent = new Intent(MainActivity.this, EventDetail.class);
                 detailedIntent.putExtra("title", title );
                 detailedIntent.putExtra("details", detail);
+                detailedIntent.putExtra("icon",iconImage);
                 startActivity(detailedIntent);
 
-                Toast.makeText(getApplicationContext(), "ID #" + itemClickId + " was click", Toast.LENGTH_LONG).show();
+
             }
         });
 
