@@ -65,6 +65,7 @@ public class CustomListViewAdapter extends BaseAdapter {
                 icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.senior_citizen));
             }
 
+            // Alternate between light and dark background for list items
             if (position % 2 == 1) {
                 // TODO get colors from colors.xml programmatically
                 view.setBackgroundColor(Color.parseColor("#ECEECD")); // LIGHT
