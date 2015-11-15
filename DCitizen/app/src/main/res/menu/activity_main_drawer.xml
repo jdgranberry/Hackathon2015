@@ -2,19 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camara"
-            android:icon="@drawable/navicon_home"
-            android:title="Home" />
 
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/navicon_search"
             android:title="Search" />
+
+        <item
+            android:id="@+id/nav_camara"
+            android:icon="@drawable/navicon_home"
+            android:title="Home" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/navicon_paper"
-            android:title="Filter" />
+            android:title="Sign In" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/navicon_profile"
