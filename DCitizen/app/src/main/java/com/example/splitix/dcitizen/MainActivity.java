@@ -151,7 +151,7 @@ public class MainActivity extends AppCompatActivity
                 Intent detailedIntent = new Intent(MainActivity.this, EventDetail.class);
                 detailedIntent.putExtra("title", title );
                 detailedIntent.putExtra("details", detail);
-                detailedIntent.putExtra("icon",iconImage);
+                detailedIntent.putExtra("icon", iconImage);
                 startActivity(detailedIntent);
 
 
@@ -201,10 +201,11 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camara) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+
 
         } else if (id == R.id.nav_slideshow) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
 
