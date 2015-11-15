@@ -2,6 +2,7 @@ package com.example.splitix.dcitizen;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,6 +54,8 @@ public class CustomListViewAdapter extends BaseAdapter {
             TextView post = (TextView) view.findViewById(R.id.feed_post);
             ImageView icon = (ImageView) view.findViewById(R.id.feed_image);
 
+
+
             HashMap<String, String> mData;
 
             mData = feed.get(position);
@@ -84,15 +87,15 @@ public class CustomListViewAdapter extends BaseAdapter {
                 view.setBackgroundColor(Color.parseColor("#dcc293")); // DARK
 
                 if(mData.get("icon") == "pet"){
-                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_paw));
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_paw2));
                 }else if(mData.get("icon") == "food"){
-                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_bowl));
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_bowl2));
                 }else if(mData.get("icon") == "blood"){
                     icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_blooddrive));
                 }else if(mData.get("icon") == "natural"){
-                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_storm));
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_storm2));
                 }else if(mData.get("icon") == "comm"){
-                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_community));
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_community2));
                 }else{
                     icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.senior_citizen));
                 }
