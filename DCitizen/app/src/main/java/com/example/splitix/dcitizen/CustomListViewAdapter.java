@@ -58,7 +58,12 @@ public class CustomListViewAdapter extends BaseAdapter {
 
             title.setText(mData.get("title"));
             post.setText(mData.get("post"));
-            icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.senior_citizen));
+            if(mData.get("icon") == "pet"){
+                icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.twitter));
+            }else{
+                icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.senior_citizen));
+            }
+
         }
         return view;
     }
