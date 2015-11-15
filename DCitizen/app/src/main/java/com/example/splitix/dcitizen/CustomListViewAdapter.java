@@ -2,6 +2,7 @@ package com.example.splitix.dcitizen;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,8 @@ public class CustomListViewAdapter extends BaseAdapter {
             TextView title = (TextView) view.findViewById(R.id.feed_title);
             TextView post = (TextView) view.findViewById(R.id.feed_post);
             ImageView icon = (ImageView) view.findViewById(R.id.feed_image);
+
+
 
             HashMap<String, String> mData;
 
