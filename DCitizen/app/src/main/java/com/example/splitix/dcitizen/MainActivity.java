@@ -3,7 +3,6 @@ package com.example.splitix.dcitizen;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -86,14 +85,14 @@ public class MainActivity extends AppCompatActivity
 
         final String[] feedIcons = new String[]{
                 "pet",
-                "none",
-                "none",
-                "none",
-                "none",
-                "none",
-                "none",
-                "none",
-                "none",
+                "food",
+                "pet",
+                "blood",
+                "food",
+                "comm",
+                "pet",
+                "natural",
+                "comm",
                 "none",
                 "none",
                 "none",
@@ -186,6 +185,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camara) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_slideshow) {
 
