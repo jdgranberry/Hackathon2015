@@ -84,6 +84,26 @@ public class MainActivity extends AppCompatActivity
 
         };
 
+        final String[] feedIcons = new String[]{
+                "pet",
+                "none",
+                "none",
+                "none",
+                "none",
+                "none",
+                "none",
+                "none",
+                "none",
+                "none",
+                "none",
+                "none",
+
+        };
+
+        final String[] feedLocations = new String[]{
+
+        };
+
         ArrayList<HashMap<String, String>> feedList = new ArrayList<>();
 
 
@@ -93,6 +113,7 @@ public class MainActivity extends AppCompatActivity
             HashMap<String, String> data = new HashMap<>();
             data.put("title", feedTitles[i]);
             data.put("post", feedPosts[i]);
+            data.put("icon", feedIcons[i]);
 
             feedList.add(data);
         }
@@ -110,8 +131,8 @@ public class MainActivity extends AppCompatActivity
 
                 String itemClickId = listView.getItemAtPosition(position).toString();
 
-                 String title = feedTitles[position];
-                 String detail = feedPosts[position];
+                String title = feedTitles[position];
+                String detail = feedPosts[position];
 
                 Intent detailedIntent = new Intent(MainActivity.this, EventDetail.class);
                 detailedIntent.putExtra("title", title );
