@@ -24,7 +24,7 @@ public class EventSubmissionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_submission);
 
-        mSubmitButton = (ImageButton) findViewById(R.id.submit_button);
+        /*mSubmitButton = (ImageButton) findViewById(R.id.submit_button);
         mTitle = (EditText) findViewById(R.id.edit_title);
         mBlurb = (EditText) findViewById(R.id.edit_description);
         mTags = (EditText) findViewById(R.id.edit_tag);
@@ -36,6 +36,6 @@ public class EventSubmissionActivity extends AppCompatActivity {
                 newEvent.setTitle(mTitle.getText().toString());
                 newEvent.setBlurb(mBlurb.getText().toString());
             }
-        });
+        });*/
     }
 }
