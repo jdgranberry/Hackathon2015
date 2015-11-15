@@ -59,18 +59,45 @@ public class CustomListViewAdapter extends BaseAdapter {
 
             title.setText(mData.get("title"));
             post.setText(mData.get("post"));
-            if(mData.get("icon") == "pet"){
-                icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.twitter));
-            }else{
-                icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.senior_citizen));
-            }
+
 
             if (position % 2 == 1) {
                 // TODO get colors from colors.xml programmatically
                 view.setBackgroundColor(Color.parseColor("#ECEECD")); // LIGHT
+
+                if(mData.get("icon") == "pet"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_paw));
+                }else if(mData.get("icon") == "food"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_bowl));
+                }else if(mData.get("icon") == "blood"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_blooddrive));
+                }else if(mData.get("icon") == "natural"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_storm));
+                }else if(mData.get("icon") == "comm"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_community));
+                }else{
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.senior_citizen));
+                }
+
             } else {
                 view.setBackgroundColor(Color.parseColor("#dcc293")); // DARK
+
+                if(mData.get("icon") == "pet"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_paw));
+                }else if(mData.get("icon") == "food"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_bowl));
+                }else if(mData.get("icon") == "blood"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_blooddrive));
+                }else if(mData.get("icon") == "natural"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_storm));
+                }else if(mData.get("icon") == "comm"){
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.icon_community));
+                }else{
+                    icon.setImageDrawable(mContext.getResources().getDrawable(R.drawable.senior_citizen));
+                }
             }
+
+
         }
         return view;
     }
