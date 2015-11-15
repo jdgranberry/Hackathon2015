@@ -15,6 +15,7 @@ public class EventDetail extends AppCompatActivity {
 
     private TextView title_view;
     private TextView description_view;
+    private String eventType;
     private Bundle extras;
     private String title;
     private String description;
@@ -30,12 +31,13 @@ public class EventDetail extends AppCompatActivity {
 
         extras = getIntent().getExtras();
 
-         title = extras.getString("title");
-         description = extras.getString("details");
+        title = extras.getString("title");
+        description = extras.getString("details");
+        eventType = extras.getString("type");
+
 
         title_view.setText(title);
         description_view.setText(description);
-
 
 
     }

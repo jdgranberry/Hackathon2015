@@ -43,9 +43,9 @@
             android:paddingTop="16dp"
             android:id="@+id/map_filler_image"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/event_map_filler"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/eventmap"
             />
         <ImageView
             android:paddingTop="16dp"
