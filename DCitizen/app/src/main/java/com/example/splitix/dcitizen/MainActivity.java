@@ -192,6 +192,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
+            Intent intent = new Intent(this, VIewProfileActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
 

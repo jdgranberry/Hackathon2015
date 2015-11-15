@@ -3,12 +3,9 @@ package com.example.splitix.dcitizen;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.example.splitix.dcitizen.Events.EventContainer;
 
 public class EventSubmissionActivity extends AppCompatActivity {
 
