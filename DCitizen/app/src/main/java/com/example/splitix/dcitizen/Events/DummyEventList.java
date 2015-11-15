@@ -7,6 +7,7 @@ import java.util.Map;
 
 /**
  * This creates a list of dummy Event items.
+ * TODO make this a singleton that event submission adds items to
  *
  * Created by jdgranberry on 11/14/15.
  */
@@ -47,7 +48,7 @@ public class DummyEventList {
         addItem(new EventContainer("5", "Blood Drive", "Save a life, donate blood today! " +
                 "Sponsored by The American Red Cross.", "http://www.redcross.org/tx/austin",
                 "https://american.redcross.org/images/content/pagebuilder/2015_Catalog_Comfort_Kits_290x290.jpg",
-                "National", "00000"));
+                "Blood Drive", "00000"));
     }
 
     private static void addItem(EventContainer item) {

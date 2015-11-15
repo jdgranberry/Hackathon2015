@@ -1,7 +1,11 @@
 package com.example.splitix.dcitizen.Events;
 
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * Container for individual event data.
+ * eventType can be used to determine which icon to display.
  *
  * Created by jdgranberry on 11/14/15.
  */
@@ -10,17 +14,19 @@ public class EventContainer {
 
     private String id;
     private String title;
-    private String description;
+    private String blurb;       // Short blurb for listView description
+    private String description; // Full description
     private String linkURL;
     private String imageURL; // TODO Make into array for multiple images
     private String eventType;
     private String GPSlocation; // TODO find a better data type
+    private List<String> tags;  // List of tags associated with event
 
-    public EventContainer(String id, String title, String description, String linkURL,
+    public EventContainer(String id, String title, String blurb, String linkURL,
                           String imageURL, String eventType, String GPSlocation) {
         this.id = id;
         this.title = title;
-        this.description = description;
+        this.blurb = blurb;
         this.linkURL = linkURL;
         this.imageURL = imageURL;
         this.eventType = eventType;
@@ -42,12 +48,12 @@ public class EventContainer {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
+    public String getBlurb() {
+        return blurb;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setBlurb(String blurb) {
+        this.blurb = blurb;
     }
 
     public String getLinkURL() {
@@ -82,6 +88,38 @@ public class EventContainer {
         this.GPSlocation = GPSlocation;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<String> getTags() {
+        return this.tags;
+    }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
+    public void addToTags(String newTag) {tags.add(newTag);}
+
+    public boolean removeFromTags(String removeTag) {
+        Iterator itr = this.tags.iterator();
+        boolean found = false;
+        String strElement;
+        while (itr.hasNext()) {
+
+            strElement = (String) itr.next();
+            if (strElement.equals(removeTag)) {
+                itr.remove();
+                found = true;
+            }
+        }
+        return found;
+    }
 
 
 }

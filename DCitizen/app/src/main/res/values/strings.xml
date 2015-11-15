@@ -6,10 +6,10 @@
 
     <!-- EventContainer Submission Strings -->
     <string name="title">Title</string>
-    <string name="description">Description</string>
+    <string name="blurb">Description</string>
     <string name="tags">Tags</string>
     <string name="hint_title">Enter a title here.</string>
-    <string name="hint_description">Enter a description here.</string>
+    <string name="hint_description">Enter a blurb here.</string>
     <string name="hint_tags">"Extracted" Tag1, Tag2, Tag3...</string>
     <!-- End EventContainer Submission String -->
 

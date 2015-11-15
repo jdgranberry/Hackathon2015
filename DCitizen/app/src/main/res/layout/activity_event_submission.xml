@@ -29,8 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/description"
-        android:id="@+id/description"
+        android:text="@string/blurb"
+        android:id="@+id/blurb"
         android:layout_below="@+id/edit_title"
         android:layout_alignParentStart="true" />
 
@@ -43,7 +43,7 @@
         android:id="@+id/edit_description"
         android:hint="@string/hint_description"
 
-        android:layout_below="@+id/description"
+        android:layout_below="@+id/blurb"
         android:layout_alignParentStart="true"
         android:layout_alignEnd="@+id/edit_title" />
 
@@ -102,11 +102,11 @@
         android:layout_alignEnd="@+id/camera_button" />
 
     <ImageView
-        android:layout_width="80dp"
-        android:layout_height="40dp"
+        android:layout_width="2000dp"
+        android:layout_height="100dp"
         android:id="@+id/submit_button"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/temp_submit_button"
+        android:src="@drawable/Icon_Submit"
         android:layout_centerHorizontal="true"
         />
 
