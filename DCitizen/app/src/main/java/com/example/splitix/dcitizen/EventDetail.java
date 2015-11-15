@@ -1,7 +1,6 @@
 package com.example.splitix.dcitizen;
 
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.GoogleMap;
@@ -17,21 +15,15 @@ import com.google.android.gms.maps.MapFragment;
 
 import org.w3c.dom.Text;
 
-import java.util.Locale;
-
 public class EventDetail extends AppCompatActivity {
-
-    final String longitude = "30.269650";
-    final String latitude ="-97.760140";
 
     private TextView title_view;
     private TextView description_view;
-    private ImageView imageView;
-    private ImageButton mapButton;
     private String eventType;
     private Bundle extras;
     private String title;
     private String description;
+    private ImageButton mapButton;
     //private GoogleMap map = ((MapFragment) getFragmentManager().findFragmentById(R.id.g_map));
 
     @Override
@@ -41,7 +33,6 @@ public class EventDetail extends AppCompatActivity {
 
         title_view = (TextView) findViewById(R.id.event_detail_title);
         description_view = (TextView) findViewById(R.id.event_detail_description);
-        imageView =(ImageView) findViewById(R.id.event_image);
         mapButton = (ImageButton) findViewById(R.id.map_image);
 
         extras = getIntent().getExtras();
@@ -53,6 +44,10 @@ public class EventDetail extends AppCompatActivity {
 
         title_view.setText(title);
         description_view.setText(description);
+
+        final String longitude = "30.269650";
+        final String latitude ="-97.760140";
+
 
         final String uri = String.format("geo:0,0?q=" + latitude+ "," + longitude);
 
