@@ -3,6 +3,8 @@
     <color name="colorPrimary">#4d6057</color> <!-- Activity Title Bar -->
     <color name="colorPrimaryDark">#3d4c45</color>
     <color name="colorAccent">#be5930</color> <!-- FAB -->
+    <color name="colorAccentPressed">#72351c</color> <!-- FAB -->
+
 
     <color name="colorIcons">#BC5830</color>
     <color name="backgroundLight">#eceecd</color>

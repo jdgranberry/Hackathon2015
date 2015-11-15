@@ -41,6 +41,7 @@
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -60,8 +61,10 @@
             android:name=".EventSubmissionActivity"
             android:label="Event Submission Page"
             android:parentActivityName=".MainActivity" >
+        </activity>11-15 12:51:35.416 22127-22127/? E/SELinux:
+        <activity android:name=".ImagePickActivity" >
         </activity>
-
+    <activity android:name=".MakePhotoActivity" > </activity>
     </application>
 
 </manifest>

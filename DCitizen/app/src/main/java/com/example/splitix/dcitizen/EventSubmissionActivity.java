@@ -1,5 +1,6 @@
 package com.example.splitix.dcitizen;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,7 +16,9 @@ public class EventSubmissionActivity extends AppCompatActivity {
     ImageButton mCameraButton;
     ImageButton mLinkButton;
     ImageButton mMapButton;
-    
+    private static final int REQUEST_CODE = 1;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,12 +26,21 @@ public class EventSubmissionActivity extends AppCompatActivity {
 
         mCameraButton = (ImageButton) findViewById(R.id.camera_button);
 
+
         mCameraButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Bring up camera
+                // Bring up gallery (ImagePickActivity)
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                intent.addCategory(Intent.CATEGORY_OPENABLE);
+                startActivityForResult(intent, REQUEST_CODE);
+
             }
         });
+
+
     }
 
 }
