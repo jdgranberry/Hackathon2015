@@ -43,13 +43,12 @@
         </activity>
         <activity
             android:name=".EventDetail"
-            android:label="@string/title_activity_event_detail" >
+            android:label="@string/event_details" >
         </activity>
         <activity
             android:name=".EventSubmissionActivity"
             android:label="Event Submission Page"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
             >
         </activity>
     </application>
