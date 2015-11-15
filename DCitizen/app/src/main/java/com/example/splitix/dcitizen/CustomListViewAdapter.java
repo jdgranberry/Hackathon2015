@@ -66,9 +66,10 @@ public class CustomListViewAdapter extends BaseAdapter {
             }
 
             if (position % 2 == 1) {
-                view.setBackgroundColor(Color.parseColor("#ECEECD"));
+                // TODO get colors from colors.xml programmatically
+                view.setBackgroundColor(Color.parseColor("#ECEECD")); // LIGHT
             } else {
-                view.setBackgroundColor(Color.parseColor("#e0d5a1"));
+                view.setBackgroundColor(Color.parseColor("#dcc293")); // DARK
             }
         }
         return view;
