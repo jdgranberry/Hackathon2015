@@ -17,6 +17,7 @@ import org.w3c.dom.Text;
 
 public class EventDetail extends AppCompatActivity {
 
+    private final String address = "1156 W Cesar Chavez St, Austin, TX 78703";
     private TextView title_view;
     private TextView description_view;
     private String eventType;
@@ -49,7 +50,7 @@ public class EventDetail extends AppCompatActivity {
         final String latitude ="-97.760140";
 
 
-        final String uri = String.format("geo:0,0?q=" + latitude+ "," + longitude);
+        final String uri = String.format("geo:0,0?q=" + address);
 
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
