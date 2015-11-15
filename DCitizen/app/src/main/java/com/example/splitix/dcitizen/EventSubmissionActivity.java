@@ -2,6 +2,8 @@ package com.example.splitix.dcitizen;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -9,18 +11,25 @@ import com.example.splitix.dcitizen.Events.EventContainer;
 
 public class EventSubmissionActivity extends AppCompatActivity {
 
-    ImageButton submit;
+    ImageButton mSubmit;
+    ImageButton mCameraButton;
+    ImageButton mLinkButton;
+    ImageButton mMapButton;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_submission);
 
-        EventContainer newEvent;
+        mCameraButton = (ImageButton) findViewById(R.id.camera_button);
 
-        EditText mTitle;
-        EditText mBlurb;
-        EditText mTags;
-
-
+        mCameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Bring up camera
+            }
+        });
     }
+
 }
+
