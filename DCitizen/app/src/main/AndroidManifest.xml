@@ -73,6 +73,11 @@
             android:label="Event Submission Page"
             android:parentActivityName=".MainActivity" >
         </activity>
+        <activity
+            android:name=".VIewProfileActivity"
+            android:label="Profile"
+            android:parentActivityName=".MainActivity" >
+        </activity>
     </application>
 
 </manifest>
