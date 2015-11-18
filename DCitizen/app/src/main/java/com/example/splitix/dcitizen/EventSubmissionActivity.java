@@ -11,7 +11,6 @@ import android.widget.ImageButton;
 import com.example.splitix.dcitizen.Events.EventContainer;
 
 //TODO onclick button highlighting
-//TODO color repeats instead of alternating occasionally on Note3
 
 public class EventSubmissionActivity extends AppCompatActivity {
 
