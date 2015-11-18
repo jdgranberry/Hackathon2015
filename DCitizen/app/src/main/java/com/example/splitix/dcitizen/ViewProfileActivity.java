@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.View;
 
-public class VIewProfileActivity extends AppCompatActivity {
+public class ViewProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
